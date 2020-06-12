@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    background-color: rgb(255, 198, 77);
+
+    .navbar-cocktail {
+        background-color: rgba(244, 246, 245, 0.219);
+    }
+}

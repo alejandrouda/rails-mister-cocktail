@@ -10,7 +10,7 @@ def create
     @dose = Dose.new(dose_params)
     @dose.cocktail_id = @cocktail.id
     if @dose.save
-        redirect_to dose_path(@dose)
+        redirect_to cocktail_path(@cocktail)
       else
         render :new #this is not a new http request, this is just rendering the action again
     end
@@ -18,6 +18,9 @@ def create
 end
 
 def destroy
+  @dose = Dose.find(params[:id])
+  @dose.destroy
+  redirect_to cocktail_path(@dose.cocktail)
 end
 
 private
