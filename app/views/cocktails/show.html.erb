@@ -1,18 +1,35 @@
 <div class="body-pages">
 
-<%= @cocktail.name %>
+<div class="cocktails">
+    <h2><%=@cocktail.name %></h2>
 
-<% @cocktail.doses.each do |dose| %>
- <%= dose.description %> of
- <%= dose.ingredient.name %>
+    <% @cocktail.doses.each do |dose| %>
+        <%= dose.description %> of
+        <%= dose.ingredient.name %>
 
 
 
 
-<%= link_to 'destroy', dose, method: :delete, data: { confirm: 'are you sure ?' } %>
+        <%= link_to 'destroy', dose, method: :delete, data: { confirm: 'are you sure ?' } %>
 
-<% end %>
+    <% end %>
 
-<%= link_to 'add an ingredient', new_cocktail_dose_path(@cocktail) %>
+    <%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail), class: "btn-wood" %>
+</div>
 
+</div>
+<%= link_to 'Back to cocktails', root_path, class: "back" %>
+
+
+<div class="footer-pages">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Follow us</i>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-.footer {
+.footer, .footer-pages {
     background: #F4F4F4;
     display: flex;
     align-items: center;
@@ -24,3 +24,7 @@
   .footer .fa-heart {
     color: #D23333;
   }
+
+.footer-pages {
+  margin-top: 400px;
+}
